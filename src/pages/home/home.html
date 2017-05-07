@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label>Concurrency</ion-label>
+    <ion-range min="1" max="200" step="10" snaps="true" pin="true" [(ngModel)]="concurrency"></ion-range>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Use zyra's link</ion-label>
+    <ion-toggle [(ngModel)]="useZyra"></ion-toggle>
+  </ion-item>
+
+  <button ion-button mode="ios" large block margin-top margin-bottom (click)="makeCall(false)">Make Angular call</button>
+  <button ion-button mode="ios" large block margin-top margin-bottom (click)="makeCall(true)">Make Native call</button>
+
+  <pre>{{ response }}</pre>
+
+  The world is your oyster.
+  <p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+  </p>
+</ion-content>
